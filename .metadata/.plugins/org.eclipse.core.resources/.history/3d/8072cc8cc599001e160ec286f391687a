@@ -1,0 +1,22 @@
+package com.java.multithreading.threadgrouping;
+
+public class ThreadGroupExample2 {
+	public static void main(String[] args) {
+		
+		ThreadGroup parent = new ThreadGroup("parent");
+		ThreadGroup child = new ThreadGroup(parent, "child");
+
+		/* Creating new threads */
+		Thread thread1 = new Thread(child, "Thread1");
+		@SuppressWarnings("unused")
+		Thread thread2 = new Thread(child, "Thread2");
+
+		System.out.println("Thread1 priority : " + thread1.getPriority());
+
+		/* Setting the priority child threadgroup priority to 10 */
+		child.setMaxPriority(4);
+		Thread thread3 = new Thread(child, "Thread 3");
+		System.out.println("Thread3 priority : " + thread3.getPriority());
+	}
+
+}

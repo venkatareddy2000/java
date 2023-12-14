@@ -1,0 +1,8 @@
+package com.java.eight.features.methodreference;
+
+public interface StaticMethodInterface {
+	static void show() {
+		System.out.println("I am from the StaticMethodInterface show method");
+	}
+
+}

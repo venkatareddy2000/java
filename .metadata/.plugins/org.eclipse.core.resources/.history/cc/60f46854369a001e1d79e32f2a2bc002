@@ -1,0 +1,9 @@
+package com.java.eight.features.staticmethod;
+
+public class StaticMethodInterfaceTest extends StaticMethodInterfaceImplementation {
+
+	public static void main(String[] args) {
+		StaticMethodInterface.show();
+	}
+
+}

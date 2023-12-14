@@ -1,0 +1,19 @@
+package com.java.collection.framework.list;
+
+/*
+ * ---------------------------ArrayList--------------------------------------
+ * 
+ * The ArrayList will store only 10 objects, if we won't specify the size and if
+ * we try insert more than 10 objects, the array size will increase to 1.5 times
+ * of the default size (that it will store 15 objects) and all the objects will
+ * be copied from the old array to the new array.
+ * 
+ * The ArrayList will be very useful for the faster access of the elements, as
+ * we are using the index of an array to retrieve the elements.
+ * 
+ * Insertion and deletion from an array will take a longer time because it needs
+ * to travel to that particular index to insert or delete
+ * 
+ * In real time applications we use ArrayList where there is more to read
+ * instead of inserting or deleting.
+ */

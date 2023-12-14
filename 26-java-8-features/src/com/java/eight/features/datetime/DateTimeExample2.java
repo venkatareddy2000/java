@@ -1,0 +1,29 @@
+package com.java.eight.features.datetime;
+
+import java.time.Instant;
+import java.time.LocalDate;
+import java.time.Duration;
+import java.time.Period;
+
+public class DateTimeExample2 {
+
+	public static void main(String[] args) {
+		// Instant representing the current moment in UTC
+		Instant currentInstant = Instant.now();
+		System.out.println("Current Instant: " + currentInstant);
+
+		// Duration between two instants
+		Instant start = Instant.now();
+		// Perform some operation that takes time
+		Instant end = Instant.now();
+		Duration duration = Duration.between(start, end);
+		System.out.println("Duration: " + duration.toMillis() + " milliseconds");
+
+		// Period between two dates
+		LocalDate startDate = LocalDate.of(2023, 1, 1);
+		LocalDate endDate = LocalDate.of(2023, 12, 31);
+		Period period = Period.between(startDate, endDate);
+		System.out.println("Period: " + period.getYears() + " years, " + period.getMonths() + " months, "
+				+ period.getDays() + " days");
+	}
+}

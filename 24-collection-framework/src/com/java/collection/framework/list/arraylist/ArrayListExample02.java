@@ -1,0 +1,19 @@
+package com.java.collection.framework.list.arraylist;
+
+import java.util.*;
+
+public class ArrayListExample02 {
+
+	public static void main(String[] args) {
+		ArrayList<String> list = new ArrayList<String>();
+		list.add("Mango");
+		list.add("Apple");
+		list.add("Banana");
+		list.add("Grapes");
+		Iterator<String> itr = list.iterator();
+		while (itr.hasNext()) {
+			System.out.println(itr.next());
+		}
+	}
+
+}

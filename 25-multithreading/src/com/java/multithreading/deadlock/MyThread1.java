@@ -1,0 +1,17 @@
+package com.java.multithreading.deadlock;
+
+public class MyThread1 extends Thread {
+	FirstResource fr;
+	SecondResource sr;
+
+	MyThread1(FirstResource fr, SecondResource sr) {
+		this.fr = fr;
+		this.sr = sr;
+	}
+
+	@Override
+	public void run() {
+		fr.method1(sr);
+	}
+
+}

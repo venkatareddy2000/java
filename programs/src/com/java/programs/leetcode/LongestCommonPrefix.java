@@ -1,0 +1,27 @@
+/*14. Longest Common Prefix*/
+package com.java.programs.leetcode;
+
+public class LongestCommonPrefix {
+	public String longestCommonPrefix(String[] strs) {
+		if (strs.length == 0 || strs == null) {
+			return "";
+		}
+		String commonPrefix = strs[0];
+		for (int i = 1; i < strs.length; i++) {
+			int j = 0;
+			while (j < commonPrefix.length() && j < strs[i].length() && (commonPrefix.charAt(j) == strs[i].charAt(j))) {
+				j++;
+			}
+			commonPrefix = commonPrefix.substring(0, j);
+		}
+		return commonPrefix;
+	}
+
+	public static void main(String[] args) {
+		LongestCommonPrefix longCommonPrefix = new LongestCommonPrefix();
+		String[] strs = { "flower", "flow", "flight" };
+		String result = longCommonPrefix.longestCommonPrefix(strs);
+		System.out.println(result);
+	}
+
+}

@@ -1,0 +1,17 @@
+package yieldMethod;
+
+public class Main {
+
+	public static void main(String[] args) {
+		/*
+		 * Yield method is of thread class that allows another thread to run which has
+		 * the same priority by stopping the execution of its current thread
+		 */
+		YieldMethod_V175 yieldMethod = new YieldMethod_V175();
+		yieldMethod.start();
+		for (int j = 1; j <= 10; j++) {
+			System.out.println("j : " + j);
+		}
+	}
+
+}

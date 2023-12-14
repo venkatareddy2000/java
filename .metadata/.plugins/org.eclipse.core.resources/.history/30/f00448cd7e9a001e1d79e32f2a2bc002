@@ -1,0 +1,38 @@
+package com.java.eight.features.streams;
+
+import java.util.function.Predicate;
+
+public class PredicateExample3 {
+	public void method(Predicate<Integer> integerPredicate, int[] array) {
+		for (int i : array) {
+			if (integerPredicate.test(i))
+				System.out.println(i);
+		}
+	}
+
+	public static void main(String[] args) {
+		/* Creating an array */
+		int[] array = { 10, 20, 30, 40, 50, 60, 70, 80, 90, 100 };
+		/* Creating a predicate */
+		Predicate<Integer> integerPredicate = (number) -> (number > 50);
+		/* Creating one more predicate */
+		Predicate<Integer> evenNumbers = (number) -> (number % 2 == 0);
+		PredicateExample3 predicateMethodPassing = new PredicateExample3();
+		/*
+		 * Calling the method by passing the predicate where the numbers are greater
+		 * than 50
+		 */
+		System.out.println("Numbers greater that 50 : ");
+		predicateMethodPassing.method(integerPredicate, array);
+		System.out.println("Even Numbers : ");
+		predicateMethodPassing.method(evenNumbers, array);
+		System.out.println("Numbers greater than 50 and even numbers : ");
+		predicateMethodPassing.method(evenNumbers.and(integerPredicate), array);
+		System.out.println("Numbers greater than 50 or even numbers : ");
+		predicateMethodPassing.method(integerPredicate.or(evenNumbers), array);
+		System.out.println("Numbers less than or equal to  : ");
+		predicateMethodPassing.method(integerPredicate.negate(), array);
+	}
+
+}
+/* Passing a predicate to a method */

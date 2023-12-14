@@ -1,0 +1,17 @@
+package com.java.collection.framework.list.arraylist;
+
+import java.util.*;
+
+public class ArrayListExample12 {
+
+	public static void main(String[] args) {
+		ArrayList<Integer> al = new ArrayList<Integer>();
+
+		System.out.println("The size of the array is: " + al.size());
+
+		ArrayList<Integer> al1 = new ArrayList<Integer>(10);
+
+		System.out.println("The size of the array is: " + al1.size());
+	}
+
+}

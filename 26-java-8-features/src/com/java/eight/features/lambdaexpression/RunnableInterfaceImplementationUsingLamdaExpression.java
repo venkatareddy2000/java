@@ -1,0 +1,29 @@
+package com.java.eight.features.lambdaexpression;
+
+public class RunnableInterfaceImplementationUsingLamdaExpression {
+
+	public static void main(String[] args) {
+		
+		/*
+		 * As Runnable is a Functional Interface we can use lambda expression to
+		 * implement the run() in the Runnable Interface as shown below
+		 */
+		Runnable runnable = () -> {
+			for (int i = 1; i <= 10; i++) {
+				System.out.println("In the run method");
+			}
+		};
+		
+		/*
+		 * To start a runnable interface we need to pass the instance of the Runnable
+		 * interface to the thread as shown below
+		 */
+		Thread thread = new Thread(runnable);
+		thread.start();
+
+		for (int i = 1; i <= 10; i++) {
+			System.out.println("In the main thread");
+		}
+	}
+
+}

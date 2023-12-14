@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;com.venky.wrapper.classes.demo.WrapperClassDemo&apos; to &apos;PrimitivesandObjectsDemo&apos;&#x0D;&#x0A;- Original project: &apos;05-wrapper-classes&apos;&#x0D;&#x0A;- Original element: &apos;com.venky.wrapper.classes.demo.WrapperClassDemo&apos;&#x0D;&#x0A;- Renamed element: &apos;com.venky.wrapper.classes.demo.PrimitivesandObjectsDemo&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;WrapperClassDemo&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;com.venky.wrapper.classes.demo{WrapperClassDemo.java[WrapperClassDemo" matchStrategy="1" name="PrimitivesandObjectsDemo" qualified="false" references="true" similarDeclarations="false" stamp="1701412343010" textual="false" version="1.0"/>
+</session>

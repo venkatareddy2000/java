@@ -1,0 +1,62 @@
+package com.java.collection.framework.list;
+
+/*
+ * ---------------------------ArrayList--------------------------------------
+ * 
+ * The ArrayList will store only 10 objects, if we won't specify the size and if
+ * we try insert more than 10 objects, the array size will increase to 1.5 times
+ * of the default size (that it will store 15 objects) and all the objects will
+ * be copied from the old array to the new array.
+ * 
+ * The ArrayList will be very useful for the faster access of the elements, as
+ * we are using the index of an array to retrieve the elements.
+ * 
+ * Insertion and deletion from an array will take a longer time because it needs
+ * to travel to that particular index to insert or delete
+ * 
+ * In real time applications we use ArrayList where there is more to read
+ * instead of inserting or deleting.
+ * 
+ * -----------------------------------------------------------------------------
+ */
+
+/*
+ * ----------------------------Linked List------------------------------
+ *
+ * Certainly, I'd be happy to tell you about linked lists!
+ * 
+ * A linked list is a fundamental data structure in computer science that is
+ * used to store a collection of elements, such as integers, strings, or any
+ * other data type. Unlike arrays, which store elements in contiguous memory
+ * locations, linked lists consist of nodes, where each node stores the actual
+ * data and a reference (or link) to the next node in the sequence. This
+ * structure allows for dynamic memory allocation and efficient insertion and
+ * deletion of elements.
+ * 
+ * There are several types of linked lists, but the two most common types are:
+ * 
+ * 1. **Singly Linked List**: In a singly linked list, each node contains the
+ * data and a reference to the next node in the list. The last node typically
+ * points to a null reference, indicating the end of the list.
+ * 
+ * 2. **Doubly Linked List**: In a doubly linked list, each node contains the
+ * data and references to both the next and the previous nodes in the list. This
+ * bidirectional linking allows for easier traversal in both directions but
+ * requires more memory than a singly linked list.
+ * 
+ * Linked lists offer various advantages and disadvantages:
+ * 
+ * Advantages: - Dynamic Size: Linked lists can grow or shrink as needed, as
+ * memory allocation is done on the fly. - Efficient Insertions and Deletions:
+ * Insertions and deletions can be more efficient than arrays, especially in the
+ * middle of the list. - Memory Utilization: Memory is used efficiently because
+ * elements are not stored in contiguous blocks.
+ * 
+ * Disadvantages: - Slower Access Time: Accessing elements in a linked list is
+ * generally slower than in an array, as you need to traverse from the beginning
+ * to the desired element. - Extra Memory Overhead: Each node in a linked list
+ * requires extra memory to store the references, leading to higher memory usage
+ * compared to arrays. - No Constant-Time Indexing: Unlike arrays, where you can
+ * access elements by their index in constant time, linked lists require linear
+ * time to access an element at a specific position.
+ */

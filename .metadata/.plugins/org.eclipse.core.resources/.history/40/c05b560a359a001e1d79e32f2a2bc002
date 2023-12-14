@@ -1,0 +1,10 @@
+package com.java8Features.DefaultMethodsInInterface;
+
+public class Test {
+
+	public static void main(String[] args) {
+		DefaultMethodInterfaceExample1 interfaceDemo = new DefaultMethodInterfaceImplementation();
+		interfaceDemo.method();
+	}
+
+}

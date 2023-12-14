@@ -1,0 +1,17 @@
+package com.java8Features.predicate;
+
+import java.util.function.Predicate;
+
+public class StringPredicate {
+
+	public static void main(String[] args) {
+		/*
+		 * Creating a predicate to check whether the length of the string is greater
+		 * than 10
+		 */
+		Predicate<String> stringPredicate = stringName -> (stringName.length() > 10);
+		System.out.println(stringPredicate.test("Venkata Reddy"));
+		System.out.println(stringPredicate.test("Venkata"));
+	}
+
+}

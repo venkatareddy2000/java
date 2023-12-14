@@ -1,0 +1,25 @@
+package com.java.eight.features.methodreference;
+
+public class InstanceMethodReferenceDemo {
+
+	public static void myMethod() {
+		for (int i = 1; i <= 10; i++) {
+			System.out.println("Child Thread");
+		}
+	}
+
+	public static void main(String[] args) {
+		Runnable runnable = InstanceMethodReferenceDemo::myMethod;
+		/*
+		 * Here for the runnable interface instead of using lambda expression to
+		 * override the run(), we are creating a our own method and referring to the
+		 * run() in the Runnable Interface
+		 */
+		Thread thread = new Thread(runnable);
+		thread.start();
+		for (int i = 0; i <= 10; i++) {
+			System.out.println("Parent Thread");
+		}
+	}
+
+}

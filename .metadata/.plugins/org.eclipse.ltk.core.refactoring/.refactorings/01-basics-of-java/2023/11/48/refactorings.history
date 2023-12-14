@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename package &apos;com.venky.java.basics&apos; to &apos;com.java.basics&apos;&#x0D;&#x0A;- Original project: &apos;01-basics-of-java&apos;&#x0D;&#x0A;- Original element: &apos;01-basics-of-java/src/com.venky.java.basics&apos;&#x0D;&#x0A;- Renamed element: &apos;01-basics-of-java/src/com.java.basics&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename package &apos;com.venky.java.basics&apos;" flags="589830" hierarchical="false" id="org.eclipse.jdt.ui.rename.package" input="/src&lt;com.venky.java.basics" name="com.java.basics" qualified="false" references="true" stamp="1701170101456" textual="false" version="1.0"/>
+</session>

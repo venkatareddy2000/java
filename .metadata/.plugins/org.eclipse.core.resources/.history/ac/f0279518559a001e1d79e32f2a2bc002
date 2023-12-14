@@ -1,0 +1,9 @@
+package com.java.eight.features.methodreference;
+
+public class StaticMethodInterfaceTest implements StaticMethodInterface {
+
+	public static void main(String[] args) {
+		StaticMethodInterface.show();
+	}
+
+}

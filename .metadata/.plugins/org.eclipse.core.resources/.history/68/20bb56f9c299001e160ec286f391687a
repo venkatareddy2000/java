@@ -1,0 +1,14 @@
+package classLevelLocking;
+
+public class ClassLevelLockDemo_V180 {
+
+	public static void main(String[] args) {
+
+		ClassLevelLockingExample t1 = new ClassLevelLockingExample("Challa");
+		ClassLevelLockingExample t2 = new ClassLevelLockingExample("Venkata");
+
+		t1.start();
+		t2.start();
+	}
+
+}

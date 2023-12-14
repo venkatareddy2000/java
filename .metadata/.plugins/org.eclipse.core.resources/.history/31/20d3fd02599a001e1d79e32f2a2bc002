@@ -1,0 +1,16 @@
+package com.java8Features.MethodReference;
+
+public class ConstructorMethodReference {
+
+	ConstructorMethodReference() {
+		System.out.println("This is a ConstructorMethodReference program");
+	}
+
+	public static void main(String[] args) {
+		Runnable runnable = ConstructorMethodReference::new;
+
+		Thread thread = new Thread(runnable);
+		thread.start();
+	}
+
+}

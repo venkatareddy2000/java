@@ -1,0 +1,27 @@
+package com.java.multithreading.customthread;
+
+public class MultiThreadingExample2 implements Runnable {
+
+	public static void main(String[] args) {
+		/*
+		 * We cannot directly call start the method because we are implementing the
+		 * Runnable and it will throw compilation error, if we do.
+		 * 
+		 * implementRunnable.start();Throwing compilation error
+		 *
+		 * To call the thread methods we need to pass the object to the thread
+		 * constructor
+		 */
+		MultiThreadingExample2 implementRunnable = new MultiThreadingExample2();
+		Thread thread = new Thread(implementRunnable);
+		thread.start();
+	}
+
+	@Override
+	public void run() {
+		System.out.println("The current running thread is : " + Thread.currentThread()
+				+ " with a thread priority of :" + Thread.currentThread().getPriority());
+
+	}
+
+}

@@ -1,0 +1,82 @@
+package com.collectionsFrameworkandGenerics.list.ArrayList;
+
+import java.util.ArrayList;
+
+public class ListMethods {
+
+	public static void main(String[] args) {
+
+		/* Creating an object for the ArrayList class that stores 100 objects */
+		ArrayList<Integer> arrayList = new ArrayList<Integer>(100);
+
+		/* Adding 100 numbers to the list using for loop */
+		for (int i = 10; i <= 100; i = i + 10) {
+			arrayList.add(i);
+		}
+
+		/* printing the list elements */
+		System.out.println(" Array List : " + arrayList);
+
+		/* Inserting a value into the ArrayList using the index position */
+		arrayList.add(0, 1000);
+
+		/* The 1000 is inserted in the 0 index position */
+		System.out.println("After inserting : " + arrayList);
+
+		/* Replacing the first index with a different value instead of 1 */
+		arrayList.set(1, 10000);
+
+		/* After replacing the value */
+		System.out.println("List after replacing : " + arrayList);
+
+		/* Creating another list */
+		ArrayList<Integer> arrayList2 = new ArrayList<Integer>(100);
+
+		/* Adding some objects to the newly created list */
+		arrayList2.add(110);
+		arrayList2.add(120);
+		arrayList2.add(130);
+		arrayList2.add(140);
+
+		/* Printing the second arrayList */
+		System.out.println("Second ArrayList : " + arrayList2);
+
+		/* Adding the second list to the end of the first list */
+		arrayList.addAll(arrayList2);
+
+		/* printing the first array list again */
+		System.out.println("First List after adding the second list to the end :" + arrayList);
+
+		/* Adding the second list to the first list using index position */
+		arrayList.addAll(3, arrayList2);
+
+		/* printing the first array list again */
+		System.out.println("First List after adding the second list at index position 3 :" + arrayList);
+
+		/* Checking an object is present in the list or not */
+		if (arrayList.contains(1000)) {
+			System.out.println("The object is Present");
+		} else {
+			System.out.println("The object is not present");
+		}
+
+		/*
+		 * Checking the size of the first array and displaying the elements using for
+		 * loop
+		 */
+		int size = arrayList.size();
+		System.out.println("The number of elements in the first array is : " + size);
+
+		/* displaying the elements using for loop */
+		for (int i = 0; i < arrayList.size(); i++) {
+			System.out.println(arrayList.get(i));
+		}
+
+		/* Removing the 0th index element in the first array list */
+		arrayList.remove(0);
+
+		/* Reprinting the first array list after removing the object */
+		System.out.println("Array List : " + arrayList);
+	}
+
+}

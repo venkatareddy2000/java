@@ -1,0 +1,25 @@
+package com.java8Features.FunctionalInterface;
+
+public class FunctionalInterfaceDemoTest {
+
+	public static void main(String[] args) {
+		/*
+		 * FunctionalInterfaceImpl implementation = new FunctionalInterfaceImpl();
+		 * implementation.method();
+		 */
+		/*
+		 * To access any abstract method's we need to implement the interface and need
+		 * to override the method and write our own logic. This is time taking process
+		 * and need to write more lines of code. We can use lambda expression to
+		 * implement the abstract methods in the interface
+		 */
+
+		/* Using lambda expression */
+
+		FunctionalIntefaceDemo implementation = () -> System.out.println("Inside method");
+		implementation.method();
+
+		/* With the help of lambda expression we can reduce the lines of code */
+	}
+
+}

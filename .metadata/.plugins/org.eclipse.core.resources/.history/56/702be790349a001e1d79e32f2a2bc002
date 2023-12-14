@@ -1,0 +1,12 @@
+package com.java8Features.DefaultMethodsInInterface;
+
+public interface InterfaceDemo {
+	/*
+	 * From Java8 onwards we can use default methods in java where we can write the
+	 * implementation for the methods in the interface itself
+	 */
+	default void method() {
+		System.out.println("From InterfaceDemo Method");
+	}
+
+}

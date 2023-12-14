@@ -1,0 +1,30 @@
+package com.collectionsFrameworkandGenerics.ComparableandComparator;
+
+import java.util.ArrayList;
+import java.util.Collections;
+
+public class ComparableandComparatorExample {
+
+	public static void main(String[] args) {
+
+		Students s1 = new Students(26, "Venkata Reddy");
+		Students s2 = new Students(40, "Gopi Reddy");
+		Students s3 = new Students(15, "Challa Venkata Reddy");
+
+		ArrayList<Students> students = new ArrayList<Students>();
+		students.add(s1);
+		students.add(s2);
+		students.add(s3);
+		// Collections.sort(students); sorting using comparable
+		@SuppressWarnings("unused")
+		AgeComparator ageComparator = new AgeComparator();
+		NameComparator nameComparator = new NameComparator();
+		/* Sorting using comparator by length of the name */
+		Collections.sort(students, nameComparator);
+
+		for (Students students2 : students) {
+			System.out.println(students2);
+		}
+	}
+
+}

@@ -1,0 +1,22 @@
+package com.java.multithreading.daemonthread;
+
+public class DaemonThreadTest {
+
+	public static void main(String[] args) {
+		/*
+		 * 1.The main thread cannot be a daemon thread.
+		 * 
+		 * Main thread cannot be a daemon thread.
+		 */
+
+		DaemonThreadExample thread = new DaemonThreadExample();
+		
+		/* Setting a thread to a daemon thread */
+		thread.setDaemon(true);
+		System.out.println("Thread is a daemon thread? : " + thread.isDaemon());
+		/* Checking main thread is daemon or not? */
+		System.out.println("Is main thread a daemon thread? :" + Thread.currentThread().isDaemon());
+
+	}
+
+}

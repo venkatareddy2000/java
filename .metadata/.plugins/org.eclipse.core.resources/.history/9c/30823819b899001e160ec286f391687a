@@ -1,0 +1,36 @@
+package multiThreading;
+
+import java.util.Scanner;
+
+public class CalculatingTime_V171 extends Thread {
+	/* Calculating the time taken by a method to complete it's execution */
+	static int number;
+	static int sum = 0;
+
+	public static void main(String[] args) {
+		long startTime = System.currentTimeMillis();
+		CalculatingTime_V171 joinMethod = new CalculatingTime_V171();
+		@SuppressWarnings("resource")
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("Enter a number to calculate the sum of n natural numbers : ");
+		CalculatingTime_V171.number = scanner.nextInt();
+		joinMethod.start();
+
+		try {
+			joinMethod.join();
+		} catch (InterruptedException e) {
+			System.out.println("Issue in the main method");
+		}
+		System.out.println("The sum of n natural number's is : " + CalculatingTime_V171.sum);
+		long endTime = System.currentTimeMillis();
+		System.out.println(
+				"The total time taken to complete the execution is : " + (endTime - startTime) / 1000 + " second");
+	}
+
+	public void run() {
+		for (int i = 0; i <= CalculatingTime_V171.number; i++) {
+			CalculatingTime_V171.sum = CalculatingTime_V171.sum + i;
+		}
+	}
+
+}

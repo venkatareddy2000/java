@@ -1,0 +1,10 @@
+package com.java.collection.framework.map.treemap;
+
+public class TreeMapExample1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

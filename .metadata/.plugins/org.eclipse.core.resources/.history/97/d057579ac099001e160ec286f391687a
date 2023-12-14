@@ -1,0 +1,20 @@
+package synchronization;
+
+public class MyThread extends Thread {
+	DisplayName displayName;
+	String name;
+
+	/*
+	 * This is a constructor that is going to take two parameters one is the
+	 * instance of the DisplayName class and the other is the name
+	 */
+	MyThread(DisplayName displayName, String name) {
+		this.displayName = displayName;
+		this.name = name;
+	}
+
+	public void run() {
+		displayName.displayName(name);
+	}
+
+}

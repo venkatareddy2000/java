@@ -1,0 +1,12 @@
+package com.java8Features.FunctionalInterface;
+
+@FunctionalInterface
+public interface FunctionalInterfaceDemoExtend extends FunctionalIntefaceDemo {
+	// void method2();
+	void method();
+}
+/*
+ * If we extend any FunctionalInterface we cannot create any abstract method if
+ * we mark the child class with @FunctionalInterface as it will throw a
+ * compilation error
+ */

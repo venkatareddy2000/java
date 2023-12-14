@@ -1,0 +1,16 @@
+package com.java.eight.features.foreachmethod;
+
+import java.util.*;
+
+public class ForEachMethodExample {
+
+	public static void main(String[] args) {
+		List<String> items = new ArrayList<String>();
+		items.add("apple");
+		items.add("banana");
+		items.add("cat");
+
+		items.forEach(item -> System.out.println(item));
+	}
+
+}

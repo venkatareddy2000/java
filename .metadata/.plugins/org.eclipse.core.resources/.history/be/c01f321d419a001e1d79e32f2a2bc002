@@ -1,0 +1,7 @@
+package com.java8Features.LambdaExpression;
+
+@FunctionalInterface
+public interface CalculateSumUsingLambdaExpression {
+	void add(int x, int y);
+
+}

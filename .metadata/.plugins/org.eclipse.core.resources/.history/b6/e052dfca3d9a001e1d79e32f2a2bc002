@@ -1,0 +1,64 @@
+package com.java8Features.FunctionalInterface;
+/*
+ * In Java, a functional interface is an interface that contains exactly one
+ * abstract (unimplemented) method. Functional interfaces are also known as
+ * Single Abstract Method (SAM) interfaces. These interfaces are a key component
+ * of Java's support for functional programming and are used extensively in
+ * conjunction with lambda expressions and method references.
+ * 
+ * Here are some important points about functional interfaces in Java:
+ * 
+ * 1. **Single Abstract Method (SAM) Requirement**: A functional interface must
+ * have exactly one abstract method. It can have multiple default or static
+ * methods with implementations, but it should have only one abstract method.
+ * This single abstract method defines the functional contract that instances of
+ * the interface must adhere to.
+ * 
+ * 2. **@FunctionalInterface Annotation**: While it's not required, it's a good
+ * practice to annotate a functional interface with `@FunctionalInterface`. This
+ * annotation serves as a compiler hint to ensure that the interface meets the
+ * functional interface requirements. If you accidentally add more than one
+ * abstract method to an interface annotated with `@FunctionalInterface`, the
+ * compiler will generate an error.
+ * 
+ * ```java
+ * 
+ * @FunctionalInterface interface MyFunctionalInterface { void doSomething(); }
+ * ```
+ * 
+ * 3. **Usage with Lambda Expressions**: Functional interfaces are primarily
+ * used in conjunction with lambda expressions to provide concise
+ * implementations of their single abstract method. This allows you to pass
+ * behavior as data.
+ * 
+ * ```java MyFunctionalInterface func = () ->
+ * System.out.println("Doing something"); func.doSomething(); // Calls the
+ * lambda expression's implementation ```
+ * 
+ * 4. **Method References**: Functional interfaces can also be used with method
+ * references, which provide a way to refer to methods by name rather than
+ * providing a full lambda expression.
+ * 
+ * ```java List<String> names = Arrays.asList("Alice", "Bob", "Charlie");
+ * names.forEach(System.out::println); // Method reference to System.out.println
+ * ```
+ * 
+ * 5. **Built-in Functional Interfaces**: Java provides a set of commonly used
+ * functional interfaces in the `java.util.function` package. Some examples
+ * include: - `Supplier<T>`: Represents a supplier of results, takes no
+ * arguments, and returns a result. - `Consumer<T>`: Represents an operation
+ * that accepts a single input argument and returns no result. - `Predicate<T>`:
+ * Represents a predicate (boolean-valued function) of one argument. -
+ * `Function<T, R>`: Represents a function that accepts one argument and
+ * produces a result.
+ * 
+ * Here's an example using a built-in functional interface:
+ * 
+ * ```java Predicate<Integer> isEven = n -> n % 2 == 0; boolean result =
+ * isEven.test(10); // Checks if 10 is even ```
+ * 
+ * Functional interfaces and lambda expressions make it easier to write more
+ * concise and expressive code, especially when working with APIs that require
+ * passing behavior as arguments, such as the Java Stream API for collections or
+ * various callback mechanisms in event-driven programming.
+ */

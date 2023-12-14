@@ -1,0 +1,54 @@
+package com.java.multithreading.thread;
+
+import java.util.Scanner;
+
+public class MultiThreadingExample4 extends Thread {
+	/*
+	 * In Java, the join() method is a method provided by the Thread class that
+	 * allows one thread to wait for another thread to complete its execution. This
+	 * method is useful when you want to ensure that certain threads finish their
+	 * execution before the main thread or another thread proceeds.
+	 * 
+	 * When a thread calls the join() method on another thread, it effectively
+	 * blocks itself until the other thread completes its execution.
+	 * 
+	 * If the other thread has already completed its execution, the calling thread
+	 * continues executing immediately without any delay.
+	 * 
+	 * If the other thread is still running, the calling thread will be blocked
+	 * until the other thread completes.
+	 */
+
+	static int number;
+	static int sum = 0;
+
+	public static void main(String[] args) {
+		MultiThreadingExample4 joinMethod = new MultiThreadingExample4();
+		@SuppressWarnings("resource")
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("Enter a number to calculate the sum of n natural numbers : ");
+		MultiThreadingExample4.number = scanner.nextInt();
+		joinMethod.start();
+
+		/*
+		 * When we call the join method it will make sure that the run method is
+		 * completely executed and then only it will display the result. If we won't use
+		 * join it might print the result without complete execution of the run method
+		 */
+
+		try {
+			joinMethod.join();
+		} catch (InterruptedException e) {
+			System.out.println("Issue in the main method");
+		}
+		System.out.println("The sum of n natural number's is : " + MultiThreadingExample4.sum);
+
+	}
+
+	public void run() {
+		for (int i = 0; i <= MultiThreadingExample4.number; i++) {
+			MultiThreadingExample4.sum = MultiThreadingExample4.sum + i;
+		}
+	}
+
+}

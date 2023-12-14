@@ -1,0 +1,31 @@
+package com.java8Features.Streams;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
+
+public class UpperCaseToLowerCase {
+
+	@SuppressWarnings("static-access")
+	public static void main(String[] args) {
+		ArrayList<Character> list = new ArrayList<Character>();
+		for (Character i = 'A'; i <= 'Z'; i++) {
+			list.add(i);
+		}
+		System.out.println(list);
+
+		List<Character> collect = list.stream().map(s -> s.toLowerCase(s)).collect(Collectors.toList());
+		System.out.println(collect);
+
+		/* Converting upper case to lower case */
+		ArrayList<String> names = new ArrayList<String>();
+		names.add("VENKATA");
+		names.add("REDDY");
+		names.add("CHALLA");
+		System.out.println(names);
+		/* Using streams to convert upper case to lower case */
+		List<String> lowerCase = names.stream().map(s -> s.toLowerCase()).collect(Collectors.toList());
+		System.out.println(lowerCase);
+	}
+
+}

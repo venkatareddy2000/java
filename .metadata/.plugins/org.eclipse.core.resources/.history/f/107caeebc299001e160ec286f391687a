@@ -1,0 +1,14 @@
+package classLevelLocking;
+
+public class ClassLevelLockDemo_V180 {
+
+	public static void main(String[] args) {
+
+		MyThread t1 = new MyThread("Challa");
+		MyThread t2 = new MyThread("Venkata");
+
+		t1.start();
+		t2.start();
+	}
+
+}

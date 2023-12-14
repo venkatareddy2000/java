@@ -1,0 +1,15 @@
+package com.java8Features.DefaultMethodsInInterface;
+
+public class InterfaceDemoImpl implements InterfaceDemo, InterfaceDemo1 {
+
+	@Override
+	public void method() {
+		System.out.println("Inside InterfaceDemoImpl method");
+	}
+	/*
+	 * Whenever we implement multiple interfaces which contains same default methods
+	 * in the extended method we need to override it else it will cause compilation
+	 * error.
+	 */
+
+}

@@ -1,0 +1,10 @@
+package com.java8Features.LambdaExpression;
+
+public class CalculateSumUsingLambdaExpressionTest {
+
+	public static void main(String[] args) {
+		LambdaExpressionExample sum = (x, y) -> System.out.println("The sum of two numbers is : " + (x + y));
+		sum.add(50, 60);
+	}
+
+}
